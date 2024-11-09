@@ -27,7 +27,7 @@ body{
     border-radius: 5px;
     min-height: 35vh;
     min-width: 80vw;
-    backdrop-filter: blur(3px); /* BLUR EFFEKT IN DER ÜBERSCHRIFT */
+    backdrop-filter: blur(5px); /* BLUR EFFEKT IN DER ÜBERSCHRIFT */
 }
 
 /* Bahnsteigberechnung Überschrift*/
@@ -35,18 +35,34 @@ body{
     font-size: 1.5em;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(255, 255, 255);
+    color: rgba(233, 7, 56, 0.842);
     margin-top: 0;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 0;
 }
 .label{
-    align-self: self-start;
-    padding-left: 15px;
     margin-top: 0;
-    color: white;
+    color: rgba(197, 252, 2, 0.993);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
+    font-size: 1.2em;
+}
+.inputField{
+    height: 50px;
+    text-align: center;
+    font-size: 1.0em;
+    border-radius: 20px;
+    border: none;
+}
 
+.inputField:focus {
+    outline: none;
+    border: 2px solid blue;
+}
+.btn{
+    margin-top: 5%;
+    padding: 10px 25px;
+    border-radius: 10px;
+    
 }

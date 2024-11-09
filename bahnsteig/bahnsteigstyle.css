@@ -24,14 +24,29 @@ body{
     flex-direction: column;
     align-items: center;
     border: 1px solid red;
+    border-radius: 5px;
     min-height: 35vh;
     min-width: 80vw;
+    backdrop-filter: blur(3px); /* BLUR EFFEKT IN DER ÜBERSCHRIFT */
 }
 
+/* Bahnsteigberechnung Überschrift*/
 .überschrift{
     font-size: 1.5em;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(255, 255, 255);
     margin-top: 0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+.label{
+    align-self: self-start;
+    padding-left: 15px;
+    margin-top: 0;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+
 }

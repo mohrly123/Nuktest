@@ -15,6 +15,9 @@ console.log(`Erfolgreich abgeholt. Daten: ${abstand}, ${minAbstand}, ${maxAbstan
 document.getElementById("titlebahnsteig").textContent = `Bahnsteigberechnung ${hoehe} mm`;
 // Setzen der Überschrift auf den entsprechenden Wert der Höhe
 document.getElementById("überschriftBahnsteig").textContent = `Bahnsteigberechnung ${hoehe} mm`;
+// Setzten der Label SollAbststand und Sollhöhe auf die entsprechenden Werte
+document.getElementById("labelAbstand").textContent = `Sollabstand = ${abstand} mm`; // Sollabstand   
+document.getElementById("labelHoehe").textContent = `Sollhoehe = ${hoehe} mm` // Sollhoehe    
 
 
 

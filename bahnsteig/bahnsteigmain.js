@@ -65,7 +65,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
         // Wenn die Eingabe keine Zahl ist
       } else {
-        console.log("Keine Zahl");
+          window.alert("Bitte eine Zahl eingeben!");
+          document.getElementById("inputAbstand").value = "";
+          
       }
     } catch {
       console.log("Falsche eingabe!");

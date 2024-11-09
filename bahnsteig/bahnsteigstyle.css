@@ -54,6 +54,7 @@ body{
     font-size: 1.0em;
     border-radius: 20px;
     border: none;
+    background-color: azure;
 }
 
 .inputField:focus {
@@ -64,5 +65,5 @@ body{
     margin-top: 5%;
     padding: 10px 25px;
     border-radius: 10px;
-    
+    background-color: azure;
 }

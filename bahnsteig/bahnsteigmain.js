@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   ).textContent = `Sollabstand = ${abstand} mm`; // Sollabstand
   document.getElementById("labelHoehe").textContent = `Sollhoehe = ${hoehe} mm`; // Sollhoehe
 
+  // FUNKTION FÜR DIE BERECHNUNG DES ABSTANDES
   function berechnenAbstand() {
     // Try Block für den Abstand
     try {
@@ -65,36 +66,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
         // Wenn die Eingabe keine Zahl ist
       } else {
-          window.alert("Bitte eine Zahl eingeben!");
-          document.getElementById("inputAbstand").value = "";
-          
+        window.alert("Bitte eine Zahl eingeben!");
+        document.getElementById("inputAbstand").value = "";
       }
     } catch {
       console.log("Falsche eingabe!");
     }
-  } 
-
-
+  }
+  // FINKTION FÜR DIE BERECHNUNG DER HÖHE
   function berechnenHoehe() {
     // Try Block für die Höhe
-    try{
+    try {
       // holen des Inputfeldes für die Höhe
       const inputHoehe = document.getElementById("inputHoehe").value;
       // Wenn die Eingabe eine Zahl ist dann weiter
-      if(!isNaN(inputHoehe)){
+      if (!isNaN(inputHoehe)) {
         // Wenn die Eingabe größer als die minHöhe und kleiner als die maxHöhe ist dann weiter
-        if(inputHoehe >= minHoehe && inputHoehe <= maxHoehe){
+        if (inputHoehe >= minHoehe && inputHoehe <= maxHoehe) {
           // Wenn die eingabe kleiner ist als die SollHöhe ist das Gleis zu Hoch
-          if(inputHoehe < hoehe){
+          if (inputHoehe < hoehe) {
             // Ergebniss = hoehe - inputHöhe
             let ergebnissHoehe = hoehe - inputHoehe;
             // Alert ausgeben
             window.alert(`Das Gleis ist um ${ergebnissHoehe} mm zu Hoch!`);
             // Leeren des Input Feldes
             document.getElementById("inputHoehe").value = "";
-            }
+          }
           // Wenn die Eingabe größer ist als die Soll Höhe
-          else if(inputHoehe > hoehe){
+          else if (inputHoehe > hoehe) {
             // Ergebnis = inputHoehe - hoehe
             let ergebnissHoehe = inputHoehe - hoehe;
             // Alert ausgeben
@@ -103,29 +102,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
             document.getElementById("inputHoehe").value = "";
           }
           // Wenn die Hebung 0mm ist
-          else{
+          else {
             window.alert("Das Gleis liegt auf 0 mm");
             document.getElementById("inputHoehe").value = "";
           }
-        }
-        else{
+        } else {
           window.alert("Achtung IHP Verletzt!");
           document.getElementById("inputHoehe").value = "";
         }
-      }
-      else{
+      } else {
         window.alert("Bitte eine Zahl eingeben!");
         document.getElementById("inputHoehe").value = "";
-      } 
-    }
-    catch{
+      }
+    } catch {
       console.log("Error");
     }
+  }
 
-  } 
-
-
-  // Weiter mit der function berechnenHoehe
+  
   // Dann noch eine funktion hinzufügen die die 1665 mm - 718 mm = 947 mm (Fahrkante)
   // und dann weiter wenn ich mit dem Disto 936 mm messe (947mm(Fahrkantenwert) - 936mm(gemessener Wert))
   // dies implementieren in die App

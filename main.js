@@ -10,6 +10,11 @@ function openBahnsteig(abstand,minAbstand,maxabstand,hoehe,minHoehe,maxHoehe){
     location.href = "./bahnsteig/bahnsteig.html"; // Ensure this path is correct
 }
 
+// Funktion um die DISTO SEITE zu öffnen
+function openDisto(){
+    location.href = "../disto/disto.html";
+}
+
 // Funktion um die Zahlen in den local Storage zu packen
 function saveToLocalStorage(abstand,minAbstand,maxAbstand,hoehe,minHoehe,maxHoehe){
     // Clearen des Storage

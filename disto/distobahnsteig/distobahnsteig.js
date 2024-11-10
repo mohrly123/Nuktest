@@ -1,4 +1,4 @@
-const abstandMitDisto = 947;
+const abstandMitDisto = 948;
 const achsAbstand = 1665;
 const letztenZweiMessungen = [];
 let ergebnisDistoBahnsteig;

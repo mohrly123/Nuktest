@@ -1,0 +1,71 @@
+body{
+    background-image: url("./bahnsteigdisto.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-position-x: left;
+    
+}
+.containerDistoBahnsteig{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.cardbeschreibung{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(7px);
+    min-width: 90vw;
+    border-radius: 20px;
+   
+
+}
+.cardbeschreibung p{
+    padding: 5px;
+    color: white;
+    font-size: 1.7em;
+}
+
+.cardBerechnung{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    backdrop-filter: blur(7px);
+    min-width: 90vw;
+    padding: 10px;
+
+}
+.cardBerechnung p{
+    color: white;
+    font-size: 1.2em;
+}
+#inputDisto{
+    background-color: transparent;
+    border: 3px solid rgb(197, 246, 1);
+    outline: 3px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1.1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    font-weight: bold;
+}
+.cardBerechnung button{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-width: 50vw;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}

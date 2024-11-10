@@ -46,15 +46,15 @@ function messungenSammeln(){
     try{
         // Wenn die länge des Array unter 2 ist
         if (letztenZweiMessungen.length < 2){
-            letztenZweiMessungen.push(ergebnisDistoBahnsteig);
+            letztenZweiMessungen.unshift(ergebnisDistoBahnsteig);
         }
         // Wenn die Länge des Arrays 2 oder mehr ist soll der erste Eintrag gelöscht werden
         else if(letztenZweiMessungen.length >= 2){
-            letztenZweiMessungen.shift();
-            letztenZweiMessungen.push(ergebnisDistoBahnsteig);
+            letztenZweiMessungen.pop();
+            letztenZweiMessungen.unshift(ergebnisDistoBahnsteig);
         }
         // Update the HTML element with the array values
-        document.getElementById("ergebnisanzeigendisto").innerText = "Die Letzten 2 Messungen: (" + letztenZweiMessungen.map(value => value).join(", ") + ")";
+        document.getElementById("ergebnisanzeigendisto").innerText = "Die Letzten 2 Messungen: \n\n(" + letztenZweiMessungen.map(value => value).join(",\n\n") + ")";
         console.log(letztenZweiMessungen);
     }
     catch{

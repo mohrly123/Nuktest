@@ -7,3 +7,37 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#h2disto{
+    font-size: 1.8em;
+    font-weight: bold;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.carddisto{
+    border: 2px solid rgb(255, 84, 75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+    width: 80vw;
+    height: 50vh;
+    gap:40px;
+
+}
+.btndisto{
+    width: 70%;
+    height: 15%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-radius: 15px;
+}
+#btnDistoBahnsteig{
+    margin-top: 10%;
+}

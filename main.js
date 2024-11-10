@@ -6,7 +6,7 @@ function openBahnsteig(abstand,minAbstand,maxabstand,hoehe,minHoehe,maxHoehe){
     this.hoehe = hoehe;
     this.minHoehe = minHoehe;
     this.maxHoehe = maxHoehe;
-    saveToLocalStorage(abstand,minAbstand,maxabstand,hoehe,minAbstand,maxHoehe);
+    saveToLocalStorage(abstand,minAbstand,maxabstand,hoehe,minHoehe,maxHoehe);
     location.href = "./bahnsteig/bahnsteig.html"; // Ensure this path is correct
 }
 

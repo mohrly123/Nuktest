@@ -72,7 +72,58 @@ document.addEventListener("DOMContentLoaded", (event) => {
     } catch {
       console.log("Falsche eingabe!");
     }
-  }
+  } 
+
+
+  function berechnenHoehe() {
+    // Try Block für die Höhe
+    try{
+      // holen des Inputfeldes für die Höhe
+      const inputHoehe = document.getElementById("inputHoehe").value;
+      // Wenn die Eingabe eine Zahl ist dann weiter
+      if(!isNaN(inputHoehe)){
+        // Wenn die Eingabe größer als die minHöhe und kleiner als die maxHöhe ist dann weiter
+        if(inputHoehe >= minHoehe && inputHoehe <= maxHoehe){
+          // Wenn die eingabe kleiner ist als die SollHöhe ist das Gleis zu Hoch
+          if(inputHoehe < hoehe){
+            // Ergebniss = hoehe - inputHöhe
+            let ergebnissHoehe = hoehe - inputHoehe;
+            // Alert ausgeben
+            window.alert(`Das Gleis ist um ${ergebnissHoehe} mm zu Hoch!`);
+            // Leeren des Input Feldes
+            document.getElementById("inputHoehe").value = "";
+            }
+          // Wenn die Eingabe größer ist als die Soll Höhe
+          else if(inputHoehe > hoehe){
+            // Ergebnis = inputHoehe - hoehe
+            let ergebnissHoehe = inputHoehe - hoehe;
+            // Alert ausgeben
+            window.alert(`Das Gleis hat ${ergebnissHoehe} mm Hebung!`);
+            // Leeren des InputFeldes
+            document.getElementById("inputHoehe").value = "";
+          }
+          // Wenn die Hebung 0mm ist
+          else{
+            window.alert("Das Gleis liegt auf 0 mm");
+            document.getElementById("inputHoehe").value = "";
+          }
+        }
+        else{
+          window.alert("Achtung IHP Verletzt!");
+          document.getElementById("inputHoehe").value = "";
+        }
+      }
+      else{
+        window.alert("Bitte eine Zahl eingeben!");
+        document.getElementById("inputHoehe").value = "";
+      } 
+    }
+    catch{
+      console.log("Error");
+    }
+
+  } 
+
 
   // Weiter mit der function berechnenHoehe
   // Dann noch eine funktion hinzufügen die die 1665 mm - 718 mm = 947 mm (Fahrkante)
@@ -81,4 +132,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // Make the function globally accessible
   window.berechnenAbstand = berechnenAbstand;
+  window.berechnenHoehe = berechnenHoehe;
 });

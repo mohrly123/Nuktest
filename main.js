@@ -12,7 +12,7 @@ function openBahnsteig(abstand,minAbstand,maxabstand,hoehe,minHoehe,maxHoehe){
 
 // Funktion um die DISTO SEITE zu öffnen
 function openDisto(){
-    location.href = "../disto/disto.html";
+    location.href = "./disto/disto.html";
 }
 
 // Funktion um die Zahlen in den local Storage zu packen
